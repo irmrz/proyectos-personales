@@ -41,19 +41,3 @@ def read_user_input():
             print("Input must be an integer")
 
     return result
-
-
-def main():
-    print("Hello! Please type the number of characters that your password will have:")
-    print("Remember that this number must be greater than 4 and smaller than 129 (not inclusive)")
-
-    length = read_user_input()
-    passw = password(length)
-
-    print(f"Your new password is: " + passw)
-    pyperclip.copy(passw)
-    print("Your password has been copied to clipboard!")
-
-
-if __name__ == '__main__':
-    main()
