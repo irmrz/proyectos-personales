@@ -1,0 +1,8 @@
+
+/**
+ * SingleMail
+ */
+public class SingleMail {
+
+    
+}

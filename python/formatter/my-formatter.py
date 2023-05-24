@@ -19,11 +19,13 @@ def bracket_counter(byte_string):
             counter += 1
             positions.append(i)
             brackets.append(byte)
+            print(counter)
         elif byte == 125:
             counter -= 1
             stack.append(counter)
             positions.append(i)
             brackets.append(byte)
+            print(counter)
         i = i + 1
     return stack, positions, brackets
 
@@ -71,6 +73,7 @@ def listToString(s):
 def main():
     byte_string = readFile('test.c')
     stack, positions, brackets = bracket_counter(byte_string)
+    print(stack)
     new_string = newString(byte_string, stack, positions, brackets)
     s1 = listToString(new_string)
 
